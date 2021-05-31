@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objednavka letenek</h1>
+    <h3>Vyber si typ letenky:</h3>
+
+    <table>
+        <tbody>
+            <form class="new">
+                <table>
+                    <tr>
+                        <td>
+                            <select name="menu1" id="typLetenek">
+                                <option value="500" id="letPraha_value">Praha 500 Kč</option>
+                                <option value="3000" id="letFrankfurt_value">Frankfurt 3,000 Kč</option>
+                                <option value="15000" id="letNewYork_value">New York 15,000 Kč</option>
+                                <option value="30000" id="letSydney_value">Sydney 30,000 Kč</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="cQuantity">Mnozstvi: &nbsp;</label><input type="number" name="tQuantity"
+                                id="pocetKusu" placeholder="ks" min="1" max="10" required value="" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+
+    <h2>Zpatecni letenka: zaskrtni</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox"id="zpatecniLetenka" >
+                    <label for="" >Zpatecni letenka</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form name="tridy" id="tridy">
+        <h2>Vyber si tridu</h2>
+        <input type="radio" name="trida1" id="trida1">- Economy class – bez přirážky
+        <br>
+        <input type="radio" name="trida1" id="trida2">- Business class - + 25 procent k ceně <br>
+        <input type="radio" name="trida1" id="trida3">- Royal class - + 50 procent k ceně <br>
+    </form>
+    <hr>
+
+    <form name="vysledek">
+        <table>
+            <tr>
+                <td>Celkova cena
+                </td>
+                <td><input type="text" id="celkem" name="celkem" value="">
+                </td>
+                <td><input type="button" value="Vypocitej cenu" id="utrata">
+                </td>
+
+            </tr>
+            <tr>
+                <td>Castka, kterou jsem ochoten zaplatit
+                </td>
+                <td><input type="text" id="ochotny" name="ochotny" value="">
+                </td>
+                <td><input type="button" value="Potvrdit" id="potvrzeni">
+                </td>
+            </tr>
+            <tr>
+                <td>Vase castka odpovida / neodpovida skutecne cene:
+                </td>
+                <td><input type="text" id="reality" name="realita" value="">
+                    <p id="napis"></p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <h3>Poznamka </h3>
+    <form action="/action_page.php">
+        <textarea placeholder="Zde zadejte sve namety a pripominky. Specialni znaky nejsou povoleny." id="poznamka" name="poznamka" rows="10" cols="40"></textarea>
+        <br><br>
+        <input type="submit" value="Odeslat"id="odeslat">
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
